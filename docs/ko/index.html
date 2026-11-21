@@ -24,8 +24,14 @@ th{font-weight:600}
 .record{background:var(--record);color:#fff}.object{background:var(--object)}.unknown{background:repeating-linear-gradient(135deg,var(--unknown) 0 5px,var(--line) 5px 6px);border-style:solid}
 .extra{background:var(--unknown);border:2px dotted var(--acc)}
 figure{margin:1.2em 0} figcaption{font-size:.9rem;color:var(--mut)}
-figure.pg img{display:block;width:100%;max-width:420px;height:auto;border:1px solid var(--line);background:#fff}
-.pair{display:flex;flex-wrap:wrap;gap:12px}.pair figure.pg{flex:1 1 260px;margin:.4em 0}
+figure.pg{margin:.4em 0}figure.pg img{display:block;width:100%;height:auto;border:1px solid var(--line);background:#fff}
+.pair{display:grid;grid-template-columns:1fr 1fr;gap:14px;align-items:start;margin:1em 0 .3em}.pair figure.pg img{aspect-ratio:760/1090;object-fit:contain}
+figure.pg.narrow{max-width:300px;margin:1em auto .3em}
+.credit{font-size:.8rem;color:var(--mut);margin:.2em 0 1.2em}
+.qgrid{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:12px;margin:.8em 0 1.2em}.qgrid blockquote{margin:0}
+.ql{font-size:.82rem;font-weight:700;color:var(--acc);margin:0 0 .3em!important}.qc .gl{margin:.5em 0 0}
+ul.notes{font-size:.9rem;color:var(--mut);padding-left:1.2em}ul.notes li{margin:.25em 0}
+@media(max-width:560px){.pair{grid-template-columns:1fr}}
 svg.bar{width:100%;height:auto;max-width:640px} .grid line,svg .grid{stroke:var(--line);stroke-width:1}
 svg text{fill:var(--fg);font-size:13px} svg .tick{fill:var(--mut);font-size:12px} svg .axis{fill:var(--mut);font-size:12px}
 svg rect.fig{fill:var(--fig)} svg rect.txt{fill:var(--txt)}
